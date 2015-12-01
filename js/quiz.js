@@ -65,11 +65,10 @@ function checkAnswers() {
     
     var names = [];
     var values = [];
-    var argentinaMsg;
-    var africaMsg;
-    var pragueMsg;
-    var italyMsg;
-    var tripMsg;
+    var arAnswer = 0;
+    var afAnswer = 0;
+    var prAnswer = 0;
+    var itAnswer = 0;
     
     for (var k=0; k < q.length; k++){
         var a = q[k].split('=');
@@ -79,68 +78,67 @@ function checkAnswers() {
 
     for (var m=0; m < names.length; m++){
         if (names[m] == "food" && values[m] == "chimichurri"){
-            argentinaMsg = true;
+            arAnswer +=1;
         }
          if (names[m] == "activity" && values[m] == "hiking"){
-            argentinaMsg = true;
+            arAnswer +=1;
         }
          if (names[m] == "animal" && values[m] == "jaguar"){
-            argentinaMsg = true;
+            arAnswer +=1;
         }
          if (names[m] == "concert" && values[m] == "tango"){
-            argentinaMsg = true;
+            arAnswer +=1;
         }
         else if (names[m] == "food" && values[m] == "bobotie"){
-            africaMsg = true;
+            afAnswer +=1;
         }
         else if (names[m] == "activity" && values[m] == "beach"){
-            africaMsg = true;
+            afAnswer +=1;
         }
        else if (names[m] == "animal" && values[m] == "elephant"){
-            africaMsg = true;
+            afAnswer +=1;
         } 
        else if (names[m] == "concert" && values[m] == "reggae"){
-            africaMsg = true;
+            afAnswer +=1;
         }
        else if (names[m] == "food" && values[m] == "veoroknedlozelo"){
-            pragueMsg = true;
+            prAnswer +=1;
         } 
         else if (names[m] == "activity" && values[m] == "market"){
-            pragueMsg = true;
+            prAnswer +=1;
         }
         else if (names[m] == "animal" && values[m] == "otter"){
-            pragueMsg = true;
+            prAnswer +=1;
         }
         else if (names[m] == "concert" && values[m] == "prague"){
-            pragueMsg = true;
+            prAnswer +=1;
         }
         else if (names[m] == "food" && values[m] == "linguine"){
-            italyMsg = true;
+            itAnswer +=1;
         }
         else if (names[m] == "activity" && values[m] == "museum"){
-            italyMsg = true;
+            itAnswer +=1;
         }
         else if (names[m] == "animal" && values[m] == "chamois"){
-            italyMsg = true;
+            itAnswer +=1;
         }
         else if (names[m] == "concert" && values[m] == "opera"){
-            italyMsg = true;
+            itAnswer +=1;
         }
-        
     }
-    if (argentinaMsg == true){
+    if (arAnswer >= 3){
         alert("You should travel to Argentina!");
     }
-    if (africaMsg == true){
+    else if (afAnswer >=3){
         alert("You should travel to South Africa!");
     }
-    if (pragueMsg == true){
+    else if (prAnswer >=3){
         alert("You should travel to Prague!");
     }
-    if (italyMsg == true){
+    else if (itAnswer >=3){
         alert("You should travel to Italy!");
     }
-    if (tripMsg == true){
+    else{
         alert("You should go on a roadtrip!");
     }
     return false;
