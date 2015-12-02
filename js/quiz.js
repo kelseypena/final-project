@@ -66,13 +66,14 @@ function checkAnswers() {
     var names = [];
     var values = [];
     var arAnswer = 0;
-    var afAnswer = 0;
-    var prAnswer = 0;
+    var saAnswer = 0;
+    var crAnswer = 0;
     var itAnswer = 0;
+    var destination;
     
     for (var k=0; k < q.length; k++){
         var a = q[k].split('=');
-		names[k] = a[0];
+names[k] = a[0];
         values[k] = a[1];
     }
 
@@ -90,28 +91,28 @@ function checkAnswers() {
             arAnswer +=1;
         }
         else if (names[m] == "food" && values[m] == "bobotie"){
-            afAnswer +=1;
+            saAnswer +=1;
         }
         else if (names[m] == "activity" && values[m] == "beach"){
-            afAnswer +=1;
+            saAnswer +=1;
         }
        else if (names[m] == "animal" && values[m] == "elephant"){
-            afAnswer +=1;
+            saAnswer +=1;
         } 
        else if (names[m] == "concert" && values[m] == "reggae"){
-            afAnswer +=1;
+            saAnswer +=1;
         }
        else if (names[m] == "food" && values[m] == "veoroknedlozelo"){
-            prAnswer +=1;
+            crAnswer +=1;
         } 
         else if (names[m] == "activity" && values[m] == "market"){
-            prAnswer +=1;
+            crAnswer +=1;
         }
         else if (names[m] == "animal" && values[m] == "otter"){
-            prAnswer +=1;
+            crAnswer +=1;
         }
         else if (names[m] == "concert" && values[m] == "prague"){
-            prAnswer +=1;
+            crAnswer +=1;
         }
         else if (names[m] == "food" && values[m] == "linguine"){
             itAnswer +=1;
@@ -128,12 +129,13 @@ function checkAnswers() {
     }
     if (arAnswer >= 3){
         alert("You should travel to Argentina!");
+        /*destination="argentinamap.html";*/
     }
-    else if (afAnswer >=3){
+    else if (saAnswer >=3){
         alert("You should travel to South Africa!");
     }
-    else if (prAnswer >=3){
-        alert("You should travel to Prague!");
+    else if (crAnswer >=3){
+        alert("You should travel to the Czech Republic!");
     }
     else if (itAnswer >=3){
         alert("You should travel to Italy!");
@@ -142,5 +144,5 @@ function checkAnswers() {
         alert("You should go on a roadtrip!");
     }
     return false;
+    /*return;*/
 }
-
