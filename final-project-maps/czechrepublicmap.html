@@ -15,21 +15,21 @@
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([34.052234, -118.243685], 13);
+        var map = L.map('map').setView([49.819, 15.475], 6);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
-    id: 'kelseypena.o6pj82hc',
+    id: 'kelseypena.oam1mc69',
     accessToken: 'pk.eyJ1Ijoia2Vsc2V5cGVuYSIsImEiOiJjaWg0NmxpNTQweTR0dnFtM2YyNGo4emQxIn0.us6vZ4idrDCvld5C6Gk_SQ'
 }).addTo(map);
-    var marker1 = L.marker([34.050528, -118.242649]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>120 S Los Angeles St #110").openPopup();
-    var marker2 = L.marker([34.048026, -118.238984]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>138 S Central Ave");
-    var marker3 = L.marker([34.056210, -118.245414]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>217 N Hill St");
-    var marker4 = L.marker([34.055833, -118.236600]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>800 N Alameda St");
+    var marker1 = L.marker([50.075538, 14.437800]).addTo(map)
+        .bindPopup("<b>Prauge, Czech Republic</b><br>").openPopup();
+    var marker2 = L.marker([49.952431, 15.268654]).addTo(map)
+        .bindPopup("<b>Kutna Hora, Czech Republic</b><br>");
+    var marker3 = L.marker([48.972027, 13.633135]).addTo(map)
+        .bindPopup("<b>Sumava National Park, Czech Republic</b><br>");
+    var marker4 = L.marker([48.812735, 14.317466]).addTo(map)
+        .bindPopup("<b>Cesky Krumlov, Czech Republic</b><br>");
     </script>
     </body>
 </html>

@@ -15,21 +15,21 @@
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([34.052234, -118.243685], 13);
+        var map = L.map('map').setView([-26.451, 23.379], 5);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
-    id: 'kelseypena.o6pj82hc',
+    id: 'kelseypena.oam1mc69',
     accessToken: 'pk.eyJ1Ijoia2Vsc2V5cGVuYSIsImEiOiJjaWg0NmxpNTQweTR0dnFtM2YyNGo4emQxIn0.us6vZ4idrDCvld5C6Gk_SQ'
 }).addTo(map);
-    var marker1 = L.marker([34.050528, -118.242649]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>120 S Los Angeles St #110").openPopup();
-    var marker2 = L.marker([34.048026, -118.238984]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>138 S Central Ave");
-    var marker3 = L.marker([34.056210, -118.245414]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>217 N Hill St");
-    var marker4 = L.marker([34.055833, -118.236600]).addTo(map)
-        .bindPopup("<b>Starbucks, L.A.</b><br>800 N Alameda St");
+    var marker1 = L.marker([-33.924869, 18.424055]).addTo(map)
+        .bindPopup("<b>Cape Town, South Africa</b><br>").openPopup();
+    var marker2 = L.marker([-33.713925, 25.520736]).addTo(map)
+        .bindPopup("<b>Port Elizabeth, South Africa</b><br>");
+    var marker3 = L.marker([-34.174736, 22.083407]).addTo(map)
+        .bindPopup("<b>Mossel Bay, South Africa</b><br>");
+    var marker4 = L.marker([-26.204103, 28.047305]).addTo(map)
+        .bindPopup("<b>Johannesburg, South Africa</b><br>");
     </script>
     </body>
 </html>

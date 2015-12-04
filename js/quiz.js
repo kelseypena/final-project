@@ -70,6 +70,7 @@ function checkAnswers() {
     var crAnswer = 0;
     var itAnswer = 0;
     var destination;
+    var myFunction;
     
     for (var k=0; k < q.length; k++){
         var a = q[k].split('=');
@@ -128,8 +129,11 @@ names[k] = a[0];
         }
     }
     if (arAnswer >= 3){
-        alert("You should travel to Argentina!");
+        /*alert("You should travel to Argentina!");*/
         /*destination="argentinamap.html";*/
+        function myFunction() {
+    window.open("argentinamap.html");
+}
     }
     else if (saAnswer >=3){
         alert("You should travel to South Africa!");
