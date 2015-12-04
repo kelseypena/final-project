@@ -1,0 +1,33 @@
+* {
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+article {
+    width: 1024px;
+    margin: auto;
+}
+
+#map {
+    height: 500px;
+}
+
+h1 {
+    font-family: Acme, "Arial Black", sans-serif;
+    color: #fff;
+    font-size: 250%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    article {
+        width: 100%;
+    }
+    #map {
+        height: 300px;
+    }
+}
