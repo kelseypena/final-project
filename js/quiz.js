@@ -70,7 +70,6 @@ function checkAnswers() {
     var crAnswer = 0;
     var itAnswer = 0;
     var destination;
-    var myFunction;
     
     for (var k=0; k < q.length; k++){
         var a = q[k].split('=');
@@ -103,7 +102,7 @@ names[k] = a[0];
        else if (names[m] == "concert" && values[m] == "reggae"){
             saAnswer +=1;
         }
-       else if (names[m] == "food" && values[m] == "veoroknedlozelo"){
+       else if (names[m] == "food" && values[m] == "veproknedlozelo"){
             crAnswer +=1;
         } 
         else if (names[m] == "activity" && values[m] == "market"){
@@ -112,7 +111,7 @@ names[k] = a[0];
         else if (names[m] == "animal" && values[m] == "otter"){
             crAnswer +=1;
         }
-        else if (names[m] == "concert" && values[m] == "prague"){
+        else if (names[m] == "concert" && values[m] == "punk"){
             crAnswer +=1;
         }
         else if (names[m] == "food" && values[m] == "linguine"){
@@ -129,24 +128,25 @@ names[k] = a[0];
         }
     }
     if (arAnswer >= 3){
-        /*alert("You should travel to Argentina!");*/
-        /*destination="argentinamap.html";*/
-        function myFunction() {
-    window.open("argentinamap.html");
-}
+    var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/argentinamap.html";
+    form.setAttribute( "action", newPage );
     }
     else if (saAnswer >=3){
-        alert("You should travel to South Africa!");
+        var newPage = "file:///Users/kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/africamap.html";
+    form.setAttribute( "action", newPage );
     }
     else if (crAnswer >=3){
-        alert("You should travel to the Czech Republic!");
+        var newPage = "file:///Users/kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/czechrepublicmap.html";
+    form.setAttribute( "action", newPage );
     }
     else if (itAnswer >=3){
-        alert("You should travel to Italy!");
+        var newPage = "file:///Users/kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/italymap.html";
+    form.setAttribute( "action", newPage );
     }
     else{
-        alert("You should go on a roadtrip!");
+        var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/roadtrip.html";
+    form.setAttribute( "action", newPage );
     }
-    return false;
+    return;
     /*return;*/
 }

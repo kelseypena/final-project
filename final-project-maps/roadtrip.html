@@ -10,26 +10,33 @@
   </head>
   <body>
     <article>
-    <h1>You should travel to Argentina!</h1>
+    <h1>You should go on a roadtrip!</h1>
     <div id="map"></div>
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([-40.431, -63.599], 4);
+        var map = L.map('map').setView([-0.352, 17.578], 1);
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     id: 'kelseypena.oam1mc69',
     accessToken: 'pk.eyJ1Ijoia2Vsc2V5cGVuYSIsImEiOiJjaWg0NmxpNTQweTR0dnFtM2YyNGo4emQxIn0.us6vZ4idrDCvld5C6Gk_SQ'
 }).addTo(map);
-    var marker1 = L.marker([-34.603684, -58.381559]).addTo(map)
-        .bindPopup("<b>Buenos Aires, Argentina</b><br>").openPopup();
-    var marker2 = L.marker([-41.133472, -71.310278]).addTo(map)
-        .bindPopup("<b>Bariloche, Argentina</b><br>");
-    var marker3 = L.marker([-50.337969, -72.264798]).addTo(map)
-        .bindPopup("<b>El Calafate, Argentina</b><br>");
-    var marker4 = L.marker([-42.769448, -65.031718]).addTo(map)
-        .bindPopup("<b>Puerto Madryn, Argentina</b><br>");
+    var marker1 = L.marker([54.525961, -105.255119]).addTo(map)
+        .bindPopup("<b>North America</b><br>").openPopup();
+    var marker2 = L.marker([-8.783195, -55.491477]).addTo(map)
+        .bindPopup("<b>South America</b><br>");
+    var marker3 = L.marker([54.525961, 15.255119]).addTo(map)
+        .bindPopup("<b>Europe</b><br>");
+    var marker4 = L.marker([-8.783195, 34.508523]).addTo(map)
+        .bindPopup("<b>Africa</b><br>");
+    var marker5 = L.marker([34.047863, 100.619655]).addTo(map)
+        .bindPopup("<b>Asia</b><br>");
+    var marker6 = L.marker([-25.274398, 133.775136]).addTo(map)
+        .bindPopup("<b>Australia</b><br>");
+    var marker6 = L.marker([-82.862752, 135.000000]).addTo(map)
+        .bindPopup("<b>Antartica</b><br>"); 
     </script>
+    <div id="externaldiv">
     </body>
 </html>
