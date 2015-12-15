@@ -11,6 +11,7 @@
   <body>
     <article>
     <h1>You should travel to South Africa!</h1>
+    <p>Book your ticket now because you're flying to South Africa! Head to the capital in Cape Town, visit Mossel Bay for surfing and scuba diving, travel to Port Elizabeth and explore the Donkin Heritage Trail, or tour Johannesburg to see the Soweto township. With so much to do, you're sure to have the time of your life!</p>
     <div id="map"></div>
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
@@ -30,6 +31,16 @@
         .bindPopup("<b>Mossel Bay, South Africa</b><br>");
     var marker4 = L.marker([-26.204103, 28.047305]).addTo(map)
         .bindPopup("<b>Johannesburg, South Africa</b><br>");
+    var info = L.control();
+        info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+		info.update = function (props) {
+			this._div.innerHTML = '<h4>Welcome to South Africa</h4>' +  ("Book your ticket now because you're flying to South Africa! Head to the capital in Cape Town, visit Mossel Bay for surfing and scuba diving, travel to Port Elizabeth and explore the Donkin Heritage Trail, or tour Johannesburg to see the Soweto township. With so much to do, you're sure to have the time of your life!");
+		};
+		info.addTo(map);
     </script>
     </body>
 </html>

@@ -11,6 +11,7 @@
   <body>
     <article>
     <h1>You should travel to Argentina!</h1>
+    <p>Book your ticket now because you're flying to Argentina! Head to the capital in Buenos Aires, visit Baroliche for chocolate tasting, travel to Puerto Madryn for whale-watching, or tour El Calafate to see blue glaciers. With so much to do, you're sure to have the time of your life!</p>
     <div id="map"></div>
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
@@ -30,6 +31,16 @@
         .bindPopup("<b>El Calafate, Argentina</b><br>");
     var marker4 = L.marker([-42.769448, -65.031718]).addTo(map)
         .bindPopup("<b>Puerto Madryn, Argentina</b><br>");
+    var info = L.control();
+        info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+		info.update = function (props) {
+			this._div.innerHTML = '<h4>Welcome to Argentina</h4>' +  ("Book your ticket now because you're flying to Argentina! Head to the capital in Buenos Aires, visit Baroliche for chocolate tasting, travel to Puerto Madryn for whale-watching, or tour El Calafate to see blue glaciers. With so much to do, you're sure to have the time of your life!");
+		};
+		info.addTo(map);
     </script>
     </body>
 </html>

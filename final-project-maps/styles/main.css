@@ -23,7 +23,28 @@ h1 {
     text-align: center;
 }
 
-@media (max-width: 800px) {
+p {
+    font-family: "Arial Black", sans-serif;
+    color: #fff;
+    font-size: 100%;
+    text-align: center;
+}
+
+.info {
+    width: 200px;
+    padding: 6px 8px;
+    font: 16px/18px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #000;
+}
+
+@media (max-width: 1000px) {
     article {
         width: 100%;
     }
@@ -31,3 +52,14 @@ h1 {
         height: 300px;
     }
 }
+
+@media (max-width: 700px) {
+     .info {
+        display: none;
+    }
+}
+
+@media (min-width: 700px){
+    p {
+        display: none;
+    }

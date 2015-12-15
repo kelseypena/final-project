@@ -11,6 +11,7 @@
   <body>
     <article>
     <h1>You should travel to Italy!</h1>
+    <p>Book your ticket now because you're flying to Italy! Head to the capital in Rome, visit the Amalfi Coast for beautiful beaches, travel to Venice and ride a gondola, or tour Milan to see one of the fashion capitals of the world. With so much to do, you're sure to have the time of your life!</p>
     <div id="map"></div>
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
@@ -30,6 +31,16 @@
         .bindPopup("<b>Venice, Italy</b><br>");
     var marker4 = L.marker([45.465422, 9.185924]).addTo(map)
         .bindPopup("<b>Milan, Italy</b><br>");
+    var info = L.control();
+        info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+		info.update = function (props) {
+			this._div.innerHTML = '<h4>Welcome to Italy</h4>' +  ("Book your ticket now because you're flying to Italy! Visit the Amalfi Coast for beautiful beaches, head to the capital in Rome, travel to Venice and ride a gondola, or tour Milan to see one of the fashion capitals of the world. With so much to do, you're sure to have the time of your life!");
+		};
+		info.addTo(map);
     </script>
     </body>
 </html>

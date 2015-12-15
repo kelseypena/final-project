@@ -11,6 +11,7 @@
   <body>
     <article>
     <h1>You should travel to the Czech Republic!</h1>
+    <p>Book your ticket now because you're flying to the Czech Republic! Head to the capital in Prague, visit Kutna Hora for cathedrals and monestaries, travel to Sumava National Park and hike mountains, or tour Cesky Krumlov to see a medieval castle. With so much to do, you're sure to have the time of your life!</p>
     <div id="map"></div>
     </article>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
@@ -30,6 +31,16 @@
         .bindPopup("<b>Sumava National Park, Czech Republic</b><br>");
     var marker4 = L.marker([48.812735, 14.317466]).addTo(map)
         .bindPopup("<b>Cesky Krumlov, Czech Republic</b><br>");
+    var info = L.control();
+        info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+		info.update = function (props) {
+			this._div.innerHTML = '<h4>Welcome to the Czech Republic</h4>' +  ("Book your ticket now because you're flying to the Czech Republic! Head to the capital in Prague, visit Kutna Hora for cathedrals and monestaries, travel to Sumava National Park and hike mountains, or tour Cesky Krumlov to see a medieval castle. With so much to do, you're sure to have the time of your life!");
+		};
+		info.addTo(map);
     </script>
     </body>
 </html>
