@@ -148,5 +148,4 @@ names[k] = a[0];
     form.setAttribute( "action", newPage );
     }
     return;
-    /*return;*/
 }
