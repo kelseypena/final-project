@@ -128,23 +128,23 @@ names[k] = a[0];
         }
     }
     if (arAnswer >= 3){
-    var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/argentinamap.html";
+    var newPage = "http://kelseypena.com/final-project/final-project-maps/africamap.html";
     form.setAttribute( "action", newPage );
     }
     else if (saAnswer >=3){
-        var newPage = "file:///Users/kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/africamap.html";
+        var newPage = "http://kelseypena.com/final-project/final-project-maps/argentinamap.html";
     form.setAttribute( "action", newPage );
     }
     else if (crAnswer >=3){
-        var newPage = "file:///Users/kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/czechrepublicmap.html";
+        var newPage = "http://kelseypena.com/final-project/final-project-maps/czechrepublicmap.html";
     form.setAttribute( "action", newPage );
     }
     else if (itAnswer >=3){
-        var newPage = "file:///Users/kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/italymap.html";
+        var newPage = "http://kelseypena.com/final-project/final-project-maps/italymap.html";
     form.setAttribute( "action", newPage );
     }
     else{
-        var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/roadtrip.html";
+        var newPage = "http://kelseypena.com/final-project/final-project-maps/roadtrip.html";
     form.setAttribute( "action", newPage );
     }
     return;
