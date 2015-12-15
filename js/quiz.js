@@ -128,7 +128,8 @@ names[k] = a[0];
         }
     }
     if (arAnswer >= 3){
-    var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/argentinamap.html";
+        alert("You should travel to Argentina");
+    /*var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/argentinamap.html";
     form.setAttribute( "action", newPage );
     }
     else if (saAnswer >=3){
@@ -146,6 +147,6 @@ names[k] = a[0];
     else{
         var newPage = "file:///Users/Kelsey/Documents/Web%20Apps%20HW/Git%20Hub/final-project/final-project-maps/roadtrip.html";
     form.setAttribute( "action", newPage );
-    }
+    }*/
     return;
 }
